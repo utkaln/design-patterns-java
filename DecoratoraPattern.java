@@ -2,8 +2,6 @@
 Decorator pattern extends properties of the parent class and extends further 
 This makes the class creation much more scalable with feature and allows reusability
 */
-package com.example.design;
-
 interface Shape {
     String draw();
 }
@@ -68,7 +66,7 @@ class PatternDecorator extends ShapeDecorator {
 
 }
 
-class Test {
+class TestDecorator {
     public static void main(String[] args) {
         Shape circle = new Circle();
         System.out.println(circle.draw());

@@ -1,5 +1,3 @@
-package com.example.design;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +23,7 @@ class ExampleComposite extends ExampleComponentAbstract {
     }
 }
 
-class Test {
+class TestComposite {
     public static void main(String[] args) {
         ExampleComposite dir_node = new ExampleComposite("directory");
         dir_node.components.add(new ExampleItem("create"));

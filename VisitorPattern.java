@@ -1,4 +1,3 @@
-package com.example.design;
 
 abstract class NodeVisitor {
     abstract void visitExampleNode(ExampleNode en);
@@ -47,7 +46,7 @@ class ImplementVisitor extends NodeVisitor {
 
 }
 
-class Test {
+class TestVisitor {
     public static void main(String[] args) {
         Node[] nodes = { new ExampleNode(), new AnotherExampleNode() };
         NodeVisitor nv = new ImplementVisitor();
