@@ -11,11 +11,13 @@ class ExampleEntity {
         os.add(o);
     }
 
+    // sample change to trigger notification
     void changeName() {
         name = (new SimpleDateFormat()).format(System.currentTimeMillis());
         notifyChange();
     }
 
+    // notify to registered subscribers
     private void notifyChange() {
         os.stream().forEach(o -> {
             o.update(name);
@@ -30,6 +32,7 @@ abstract class Observer {
 
 class EntityObserver extends Observer {
 
+   // do some action when notified of change from the entity
     @Override
     void update(String newName) {
         System.out.println("New name is : " + newName);
